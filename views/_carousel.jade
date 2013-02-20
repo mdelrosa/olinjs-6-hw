@@ -1,0 +1,20 @@
+if (typeof photos !== 'undefined')
+  div#carousel
+    for photo, i in photos
+      img(src=photo.source, height=photo.height, width=photo.width)
+else
+  div#carousel
+    img(src='http://www.fightersgeneration.com/np9/characters/darthvader-armsfolded.jpg')
+    img(src='http://www.fightersgeneration.com/characters4/vader-red.jpg')
+    img(src='http://www.fightersgeneration.com/characters4/darth-mask.jpg')
+
+a#ui-carousel-prev(href='#') Prev
+a#ui-carousel-next(href='#') Next
+
+
+      div#container
+          div#carousel
+            for photo, i in photos
+              img(src=photo.source, height=photo.height, width=photo.width)
+          a#ui-carousel-prev(href='#') Prev
+          a#ui-carousel-next(href='#') Next

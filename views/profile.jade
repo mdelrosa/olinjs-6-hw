@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+
+  body
+    div#userdiv(style="background-color: "+ prof_color)
+      p Background color?
+       input(type='text') Enter a valid button
+       button(type='submit', id='backcolor') Submit Color
+
+      p#logout
+        form(action='/logout', method='get', id='logout')
+          button(type='submit) Log Out
+
+      div#prof_pic
+        p Here's yo pic yo
+        img(src=picture)
+
+      div#center
+        a#ui-carousel-prev(href='#') Prev
+        a#ui-carousel-next(href='#') Next
+
+      include photos
+
+      if photos.length != 0
+        div.comments
+          input#comment(type='text')
+          button.btn.btn-primary(id="postComment") Comment!
+
+      div#posted
+  
